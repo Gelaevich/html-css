@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.min.css">
+  <title>Task 1.3. Forms</title>
+</head>
+
+<!-- 
+  TODO
+  1) fix all forms:
+   -names
+   -IDs
+   -require
+   -form of radio-buttons
+   - etc.
+  
+  2) grid-layout
+
+  3) style it corrct
+   - dont forget to add RESET file
+
+-->
+
+<body>
+  <div class="container">
+
+    <form class="form" action="">
+
+      <div class="form-header">
+        <h1>Create Account</h1>
+      </div>
+
+      <div class="form-content">
+        <div class="first-name">
+          <label class="" for="">
+            First name *
+            <br>
+          </label>
+          <input type="text" name="firstName" id="" required>
+        </div>
+
+        <div class="last-name">
+          <label class="" for="">
+            Last name
+            <br>
+          </label>
+          <input type="text" name="lastName" id="">
+        </div>
+
+        <div class="email">
+          <label for="">
+            Email *
+          </label>
+          <input type="email" name="email" id="" required>
+        </div>
+
+        <div class="password">
+          <label for="">
+            Password *
+          </label>
+          <input type="password" name="" id="" required>
+        </div>
+
+        <div class="confirm">
+          <label for="">
+            Confirm Password *
+          </label>
+          <input type="confirm" name="" id="" required>
+        </div>
+
+        <div class="gender">
+          <label for="">
+            Gender:
+          </label>
+          <input type="radio" name="Male" id="">
+          <input type="radio" name="Female" id="">
+        </div>
+
+        <div class="hobbies">
+          <label for="">
+            Hobbies
+          </label>
+          <input type="radio" name="Music" id="">
+          <input type="radio" name="Sports" id="">
+          <input type="radio" name="Travel" id="">
+          <input type="radio" name="Movies" id="">
+        </div>
+
+        <div class="source-of-income">
+          <label for="">
+            Source of income
+          </label>
+          <select name="" id="">
+            <option value="Employed" selected>Employed</option>
+            <option value="second">Business profits</option>
+            <option value="third">A gift from an Uncle</option>
+            <option value="fourth">A government educational grant</option>
+          </select>
+        </div>
+
+        <div class="income">
+          <label for="volume">
+            Income
+          </label>
+          <input type="range" id="volume" name="volume" min="0" max="20000">
+          <div>
+            <p>20K</p>
+          </div>
+        </div>
+
+        <div class="upload-picture">
+          <label for="">Upload Profile Picture</label>
+          <input type="file" name="" id="">
+        </div>
+
+        <div class="age">
+          <label for="">Age</label>
+          <input type="number" name="" id="">
+        </div>
+
+        <div class="bio">
+          <label for="">Bio</label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <input type="submit" value="Create">
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>
