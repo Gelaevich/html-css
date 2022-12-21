@@ -5,96 +5,85 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Task 1.3. Forms</title>
 </head>
 
-<!-- 
-  TODO
-  1) fix all forms:
-   -names
-   -IDs
-   -require
-   -form of radio-buttons
-   - etc.
-  
-  2) grid-layout
-
-  3) style it corrct
-   - dont forget to add RESET file
-
--->
 
 <body>
   <div class="container">
 
-    <form class="form" action="">
+    <form class="form" action="#" method="get">
 
       <div class="form-header">
-        <h1>Create Account</h1>
+        <h1 class="form-header__title">Create Account</h1>
       </div>
 
       <div class="form-content">
-        <div class="first-name">
-          <label class="" for="">
+        <div class="form-content__first-name">
+          <label class="label-color" for="fname">
             First name *
             <br>
           </label>
-          <input type="text" name="firstName" id="" required>
+          <input type="text" name="fname" id="fname" placeholder="enter your first name" required>
         </div>
 
-        <div class="last-name">
-          <label class="" for="">
+        <div class="form-content__last-name">
+          <label class="label-color" for="lname">
             Last name
             <br>
           </label>
-          <input type="text" name="lastName" id="">
+          <input type="text" name="lname" id="lname" placeholder="enter your last name">
         </div>
 
-        <div class="email">
-          <label for="">
+        <div class="form-content__email">
+          <label class="label-color" for="email">
             Email *
-          </label>
-          <input type="email" name="email" id="" required>
+          </label><br>
+          <input type="email" name="email" id="email" placeholder="enter your email" required>
         </div>
 
-        <div class="password">
-          <label for="">
+        <div class="form-content__password">
+          <label class="label-color" for="pwd">
             Password *
           </label>
-          <input type="password" name="" id="" required>
+          <input type="password" name="pwd" id="pwd" placeholder="enter your password" required>
         </div>
 
-        <div class="confirm">
-          <label for="">
+        <div class="form-content__confirm-password">
+          <label class="label-color" for="cpwd">
             Confirm Password *
           </label>
-          <input type="confirm" name="" id="" required>
+          <input type="password" name="cpwd" id="cpwd" placeholder="enter your password again" required>
         </div>
 
-        <div class="gender">
-          <label for="">
-            Gender:
-          </label>
-          <input type="radio" name="Male" id="">
-          <input type="radio" name="Female" id="">
+        <div class="form-content__gender">
+          <p class="label-color">Gender:</p>
+
+          <input type="radio" name="gender" id="male" value="male">
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" value="female">
+          <label for="female">Female</label>
         </div>
 
-        <div class="hobbies">
-          <label for="">
-            Hobbies
-          </label>
-          <input type="radio" name="Music" id="">
-          <input type="radio" name="Sports" id="">
-          <input type="radio" name="Travel" id="">
-          <input type="radio" name="Movies" id="">
+        <div class="form-content__hobbies">
+          <p class="label-color">Hobbies</p>
+
+          <input type="checkbox" name="hobbie1" id="hobbie1" value="music">
+          <label class="small-txt" for="hobbie1">Music</label>
+          <input type="checkbox" name="hobbie2" id="hobbie2" value="sports">
+          <label class="small-txt" for="hobbie2">Sports</label>
+          <input type="checkbox" name="hobbie3" id="hobbie3" value="travel">
+          <label class="small-txt" for="hobbie3">Travel</label>
+          <input type="checkbox" name="hobbie4" id="hobbie4" value="movies">
+          <label class="small-txt" for="hobbie4">Movies</label>
         </div>
 
-        <div class="source-of-income">
-          <label for="">
-            Source of income
+        <div class="form-content__source-of-income">
+          <label class="label-color" for="source">
+            Source of Income
           </label>
-          <select name="" id="">
+          <select name="source" id="source">
             <option value="Employed" selected>Employed</option>
             <option value="second">Business profits</option>
             <option value="third">A gift from an Uncle</option>
@@ -102,34 +91,36 @@
           </select>
         </div>
 
-        <div class="income">
-          <label for="volume">
-            Income
-          </label>
-          <input type="range" id="volume" name="volume" min="0" max="20000">
-          <div>
-            <p>20K</p>
+        <div class="form-content__income">
+          <div class="form-content__income-range">
+            <label class="label-color" for="income">
+              Income
+            </label><br>
+            <input type="range" id="income" name="income" min="0" max="20000">
+          </div>
+          <div class="form-content__income-limiter">
+            <p class="form-content__limiter">20K</p>
           </div>
         </div>
 
-        <div class="upload-picture">
-          <label for="">Upload Profile Picture</label>
-          <input type="file" name="" id="">
+        <div class="form-content__upload-picture">
+          <label class="label-color" for="file">Upload Profile Picture</label>
+          <input type="file" name="file" id="file">
         </div>
 
-        <div class="age">
-          <label for="">Age</label>
-          <input type="number" name="" id="">
+        <div class="form-content__age">
+          <label class="label-color" for="age">Age</label> <br>
+          <input type="number" name="age" id="age" value="18">
         </div>
 
-        <div class="bio">
-          <label for="">Bio</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="form-content__bio">
+          <label class="label-color" for="bio">Bio</label><br>
+          <textarea name="bio" id="bio" rows="4"></textarea>
         </div>
       </div>
 
       <div class="form-footer">
-        <input type="submit" value="Create">
+        <input class="form-footer__submit-btn" type="submit" value="Create">
       </div>
 
     </form>
