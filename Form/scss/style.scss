@@ -159,9 +159,12 @@ h6 {
     grid-area: gender;
   }
 
-  &__gender input {
-    margin: 0 1px;
-    margin: 2px 0 0 0;
+  &__gender-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin: 3px 0 0 0;
   }
 
   &__hobbies {
