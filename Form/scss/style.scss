@@ -84,6 +84,7 @@ h6 {
 * {
   font-family: "Roboto", sans-serif;
 }
+
 .container {
   display: flex;
   justify-content: center;
@@ -137,81 +138,65 @@ h6 {
   &__first-name {
     grid-area: fName;
   }
-  &__first-name input {
-    width: 100%;
-    padding: 1px 3px;
-    opacity: 0.6;
-    margin: 2px 0 0 0;
-  }
+
   &__last-name {
     grid-area: lName;
   }
-  &__last-name input {
-    width: 100%;
-    padding: 1px 3px;
-    opacity: 0.6;
-    margin: 2px 0 0 0;
-  }
+
   &__email {
     grid-area: email;
   }
-  &__email input {
-    width: 100%;
-    padding: 1px 3px;
-    opacity: 0.6;
-    margin: 2px 0 0 0;
-  }
+
   &__password {
     grid-area: pass;
   }
-  &__password input {
-    width: 100%;
-    padding: 1px 3px;
-    opacity: 0.6;
-    margin: 2px 0 0 0;
-  }
+
   &__confirm-password {
     grid-area: cPass;
   }
-  &__confirm-password input {
-    width: 100%;
-    padding: 1px 3px;
-    opacity: 0.6;
-    margin: 2px 0 0 0;
-  }
+
   &__gender {
     grid-area: gender;
   }
+
   &__gender input {
     margin: 0 1px;
     margin: 2px 0 0 0;
   }
+
   &__hobbies {
     grid-area: hobbies;
   }
+
+  &__hobbies-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 2px 0 0 0;
+  }
+
   &__source-of-income {
     grid-area: source;
   }
-  &__source-of-income select {
-    width: 100%;
-    padding: 1px 3px;
-    opacity: 0.6;
-    margin: 2px 0 0 0;
-  }
+
   &__income {
     grid-area: income;
 
     display: flex;
     gap: 10px;
   }
+
   &__income-range {
     width: 100%;
   }
+
   &__income-range input {
     accent-color: $label-color;
     width: 100%;
     margin: 2px 0 0 0;
   }
+
   &__income-limiter {
     align-self: center;
     border: 1px solid $label-color;
@@ -225,35 +210,30 @@ h6 {
   &__upload-picture {
     grid-area: upload;
   }
+
   &__upload-picture input {
     font-size: 12px;
     padding: 0;
     margin: 2px 0 0 0;
   }
+
   &__age {
     grid-area: age;
   }
-  &__age input {
-    width: 100%;
-    padding: 1px 3px;
-    opacity: 0.6;
-    margin: 2px 0 0 0;
-  }
+
   &__bio {
     grid-area: bio;
   }
+
   &__bio textarea {
-    width: 100%;
-    padding: 1px 3px;
     resize: none;
-    opacity: 0.6;
-    margin: 2px 0 0 0;
   }
 }
 
 .label-color {
   color: $label-color;
 }
+
 .small-txt {
   font-size: 11px;
 }
@@ -276,10 +256,18 @@ h6 {
     color: white;
     border-radius: 4%;
   }
+
   &__submit-btn:hover {
     background-color: rgb(1, 153, 120);
     transition: 200ms;
   }
+}
+
+.mix-input {
+  width: 100%;
+  padding: 1px 3px;
+  opacity: 0.6;
+  margin: 2px 0 0 0;
 }
 
 input[type="radio"] {
