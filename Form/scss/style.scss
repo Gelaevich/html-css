@@ -121,43 +121,10 @@ h6 {
 .form-content {
   padding: 0 28px;
 
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(6, 50px) 100px;
-  grid-template-areas:
-    "fName lName"
-    "email email"
-    "pass cPass"
-    "gender hobbies"
-    "source income"
-    "upload age"
-    "bio bio";
+  display: flex;
+  flex-wrap: wrap;
 
-  gap: 0 10px;
-
-  &__first-name {
-    grid-area: fName;
-  }
-
-  &__last-name {
-    grid-area: lName;
-  }
-
-  &__email {
-    grid-area: email;
-  }
-
-  &__password {
-    grid-area: pass;
-  }
-
-  &__confirm-password {
-    grid-area: cPass;
-  }
-
-  &__gender {
-    grid-area: gender;
-  }
+  gap: 0 2%;
 
   &__gender-input {
     display: flex;
@@ -165,10 +132,6 @@ h6 {
     gap: 5px;
 
     margin: 3px 0 0 0;
-  }
-
-  &__hobbies {
-    grid-area: hobbies;
   }
 
   &__hobbies-inputs {
@@ -179,19 +142,9 @@ h6 {
     margin: 2px 0 0 0;
   }
 
-  &__source-of-income {
-    grid-area: source;
-  }
-
   &__income {
-    grid-area: income;
-
     display: flex;
     gap: 10px;
-  }
-
-  &__income-range {
-    width: 100%;
   }
 
   &__income-range input {
@@ -210,22 +163,10 @@ h6 {
     background-color: $label-color;
   }
 
-  &__upload-picture {
-    grid-area: upload;
-  }
-
   &__upload-picture input {
     font-size: 12px;
     padding: 0;
     margin: 2px 0 0 0;
-  }
-
-  &__age {
-    grid-area: age;
-  }
-
-  &__bio {
-    grid-area: bio;
   }
 
   &__bio textarea {
@@ -271,6 +212,15 @@ h6 {
   padding: 1px 3px;
   opacity: 0.6;
   margin: 2px 0 0 0;
+}
+.full-form-input {
+  width: 100%;
+  padding-top: 3px;
+}
+
+.half-form-input {
+  width: 49%;
+  padding-top: 3px;
 }
 
 input[type="radio"] {
