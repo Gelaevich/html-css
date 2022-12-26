@@ -1,0 +1,119 @@
+body {
+  background: rgb(30, 30, 30);
+}
+
+.wrapper,
+.pacman {
+  top: 50%;
+}
+.wrapper,
+.pacman,
+.pacman > div {
+  position: absolute;
+}
+
+.wrapper {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 200px;
+  width: 70%;
+  overflow: hidden;
+}
+.pacman {
+  width: 150px;
+  height: 150px;
+  transform: translateY(-50%);
+  background: 0 0;
+  z-index: 1;
+}
+
+.pacman-top,
+.pacman-bottom {
+  background-color: #ff0;
+  height: 50%;
+  width: 100%;
+}
+
+.pacman-top {
+  top: 0;
+  border-radius: 100px 100px 0 0;
+  animation: spinTop 0.5s infinite linear;
+}
+
+.pacman-bottom {
+  bottom: 0;
+  border-radius: 0 0 100px 100px;
+  animation: spinBottom 0.5s infinite linear;
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  right: -30px;
+  animation: dot 8s infinite linear;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -6s;
+}
+.dot:nth-child(3) {
+  animation-delay: -5s;
+}
+.dot:nth-child(4) {
+  animation-delay: -4s;
+}
+.dot:nth-child(5) {
+  animation-delay: -3s;
+}
+.dot:nth-child(6) {
+  animation-delay: -2s;
+}
+.dot:nth-child(7) {
+  animation-delay: -1s;
+}
+.dot:nth-child(8) {
+  animation-delay: 0s;
+}
+.dot:nth-child(9) {
+  animation-delay: 1s;
+}
+
+@keyframes spinTop {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
+}
+
+@keyframes spinBottom {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes dot {
+  0% {
+    right: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
+}
