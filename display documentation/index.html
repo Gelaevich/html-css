@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task_1_6 Display</title>
+</head>
+
+<body>
+  <main class="main">
+    <div class="left-content">
+      <div class="sidebar">
+        <h2>Display</h2>
+        <ul class="display-list">
+          <li class="display-item"><a href="#inline">inline</a></li>
+          <li class="display-item"><a href="#block">block</a></li>
+          <li class="display-item"><a href="#contents">contents</a></li>
+          <li class="display-item"><a href="#flex">flex</a></li>
+          <li class="display-item"><a href="#grid">grid</a></li>
+          <li class="display-item"><a href="#inline-block">inline-block</a></li>
+          <li class="display-item"><a href="#inline-flex">inline-flex</a></li>
+          <li class="display-item"><a href="#inline-grid">inline-grid</a></li>
+          <li class="display-item"><a href="#inline-table">inline-table</a></li>
+          <li class="display-item"><a href="#list-item">list-item</a></li>
+          <li class="display-item"><a href="#run-in">run-in</a></li>
+          <li class="display-item"><a href="#table">table</a></li>
+          <li class="display-item"><a href="#table-caption">table-caption</a></li>
+          <li class="display-item"><a href="#table-column-group">table-column-group</a></li>
+          <li class="display-item"><a href="#table-header-group">table-header-group</a></li>
+          <li class="display-item"><a href="#table-footer-group">table-footer-group</a></li>
+          <li class="display-item"><a href="#table-row-group">table-row-group</a></li>
+          <li class="display-item"><a href="#table-cell">table-cell</a></li>
+          <li class="display-item"><a href="#table-column">table-column</a></li>
+          <li class="display-item"><a href="#table-row">table-row</a></li>
+          <li class="display-item"><a href="#none">none</a></li>
+          <li class="display-item"><a href="#initial">initial</a></li>
+          <li class="display-item"><a href="#inherit">inherit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <h1>CSS display Property</h1>
+
+      <div class="example">
+        <h3>Example</h3>
+        <p>Use of some different display values:</p>
+
+        <div class="code">
+          <p><span class="brown">p.ex1 </span>{<span class="red">display</span>:<span class="blue">none</span>;}</p>
+          <p><span class="brown">p.ex2 </span>{<span class="red">display</span>:<span class="blue">inline</span>;}</p>
+          <p><span class="brown">p.ex3 </span>{<span class="red">display</span>:<span class="blue">block</span>;}</p>
+          <p><span class="brown">p.ex4 </span>{<span class="red">display</span>:<span class="blue">inline-block</span>;}
+          </p>
+        </div>
+
+        <a target="_blank" href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_display"
+          class="btn margin-bottom">Try it Yourself »</a>
+      </div>
+
+      <p>More "Try it Yourself" examples below.</p>
+      <hr>
+
+      <h2>Definition and Usage</h2>
+      <p>The <span class="codespan">display</span> property specifies the display behavior (the type of rendering box)
+        of an element.</p>
+      <p>In HTML, the default display property value is taken from the HTML specifications or from the browser/user
+        default style sheet. The default value in XML is inline, including SVG elements.</p>
+
+      <a target="_blank" href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_display"
+        class="btn margin-bottom">Show&nbsp;demo&nbsp;></a>
+
+      <table class="table-all">
+        <tbody>
+          <tr>
+            <th style="width:25%">Default value:</th>
+            <td>?</td>
+          </tr>
+          <tr>
+            <th>Inherited:</th>
+            <td>no</td>
+          </tr>
+          <tr>
+            <th>Animatable:</th>
+            <td>no. <a class="table-link" href="https://www.w3schools.com/cssref/css_animatable.php">Read about
+                <em>animatable</em></a>
+            </td>
+          </tr>
+          <tr>
+            <th>Version:</th>
+            <td>CSS1</td>
+          </tr>
+          <tr>
+            <th>JavaScript syntax:</th>
+            <td> <i>object</i>.style.display="none"
+              <a target="_blank" class="btn btnsmall"
+                href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_js_display">Try it</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <h2>Browser Support</h2>
+      <p>The numbers in the table specify the first browser version that fully supports the property.</p>
+
+
+      <div class="table-property">
+        <table>
+          <tbody>
+            <tr>
+              <td><b>Property</b></td>
+              <td class="tr-chrome tr-img"></td>
+              <td class="tr-edge tr-img"></td>
+              <td class="tr-mozilla tr-img"></td>
+              <td class="tr-safari tr-img"></td>
+              <td class="tr-opera tr-img"></td>
+            </tr>
+            <tr>
+              <td><b>display</b></td>
+              <td>4.0</td>
+              <td>8.0</td>
+              <td>3.0</td>
+              <td>3.1</td>
+              <td>7.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <p><b>Note:</b> The values "flex" and "inline-flex" requires the -webkit- prefix to work in Safari.</p>
+      <p><b>Note:</b> "display: contents" does not work in Edge prior version 79.</p>
+
+      <hr>
+
+      <h2>CSS Syntax</h2>
+      <div class="border">
+        <p><i>display: value;</i></p>
+      </div>
+
+      <h2>Property Values</h2>
+
+      <div class="table-property-values">
+        <table>
+          <tbody>
+            <tr>
+              <td><b>Value</b></td>
+              <td><b>Description</b></td>
+              <td><b>Play&nbsp;It</b></td>
+            </tr>
+            <tr>
+              <td id="inline">inline</td>
+              <td>Displays an element as an inline element (like &lt;span>). Any height and width properties will
+                have no effect</td>
+              <td><a target="_blank" class="btn btnsmall"
+                  href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_display&preval=inline">Demo&nbsp;></a>
+              </td>
+            </tr>
+            <tr>
+              <td id="block">block</td>
+              <td>Displays an element as a block element (like &lt;p>). It starts on a new line, and takes up the
+                whole width</td>
+              <td><a target="_blank" class="btn btnsmall"
+                  href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_display&preval=block">Demo&nbsp;></a>
+              </td>
+            </tr>
+            <tr>
+              <td id="contents">contents</td>
+              <td>Makes the container disappear, making the child elements children of the element the next level up in
+                the DOM</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="flex">flex</td>
+              <td>Displays an element as a block-level flex container</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="grid">grid</td>
+              <td>Displays an element as a block-level grid container</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="inline-block">inline-block</td>
+              <td>Displays an element as an inline-level block container. The element itself is formatted as an inline
+                element, but you can apply height and width values</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="inline-flex">inline-flex</td>
+              <td>Displays an element as an inline-level flex container</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="inline-grid">inline-grig</td>
+              <td>Displays an element as an inline-level grid container</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="inline-table">inline-table</td>
+              <td>The element is displayed as an inline-level table</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="list-item">list-item</td>
+              <td>Let the element behave like a &lt;li> element</td>
+              <td><a target="_blank" class="btn btnsmall"
+                  href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_display&preval=list-item">Demo&nbsp;></a>
+              </td>
+            </tr>
+            <tr>
+              <td id="run-it">run-it</td>
+              <td>Displays an element as either block or inline, depending on context</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table">table</td>
+              <td>Let the element behave like a &lt;table> element</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table-caption">table-caption</td>
+              <td>Let the element behave like a &lt;caption> element</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table-column-group">table-column-group</td>
+              <td>Let the element behave like a &lt;colgroup> element</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table-header-group">table-header-group</td>
+              <td>Let the element behave like a &lt;thead> elemen</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table-footer-group">table-footer-group</td>
+              <td>Let the element behave like a &lt;tfoot> element</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table-row-group">table-row-group</td>
+              <td>Let the element behave like a &lt;tbody> element</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table-cell">table-cell</td>
+              <td>Let the element behave like a &lt;td> element</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table-column">table-column</td>
+              <td>Let the element behave like a &lt;col> element</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="table-row">table-row</td>
+              <td>Let the element behave like a &lt;tr> element</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="none">none</td>
+              <td>The element is completely removed</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="initial">initial</td>
+              <td>Sets this property to its default value. Read about initial </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="inherit">inherit</td>
+              <td>Inherits this property from its parent element. Read about inherit</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <h2>More Examples</h2>
+
+      <div class="example">
+        <h3>Example</h3>
+        <p>A demonstration of how to use the contents property value. In the following example the .a container will
+          disappear, and making the child elements (.b) children of the element the next level up in the DOM:</p>
+
+        <div class="code">
+          <p>
+            <span class="brown">.a</span> { <br>
+            <span class="brown">&#8195;display</span>: <span class="blue">contents</span>; <br>
+            <span class="brown">&#8195;border</span>: <span class="blue">2px solid red</span>;<br>
+            <span class="brown">&#8195;background-color</span>: <span class="blue">#ccc</span>;<br>
+            <span class="brown">&#8195;padding</span>: <span class="blue">10px</span>;<br>
+            <span class="brown">&#8195;width</span>: <span class="blue">200px</span>;<br>
+            } <br> <br>
+
+            <span class="brown">.b</span> { <br>
+            <span class="brown">&#8195;border</span>: <span class="blue">2px solid blue</span>; <br>
+            <span class="brown">&#8195;background-color</span>: <span class="blue">lightblue</span>;<br>
+            <span class="brown">&#8195;padding</span>: <span class="blue">10px</span>;<br>
+            } <br>
+          </p>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_display_contents"
+          class="btn margin-bottom">Try it Yourself »</a>
+      </div>
+
+      <div class="example">
+        <h3>Example</h3>
+        <p>A demonstration of how to use the inherit property value:</p>
+
+        <div class="code">
+          <p>
+            <span class="brown">body</span> { <br>
+            <span class="brown">&#8195;display</span>: <span class="blue">inline</span>; <br>
+            } <br> <br>
+
+            <span class="brown">p</span> { <br>
+            <span class="brown">&#8195;display</span>: <span class="blue">inherit</span>; <br>
+            } <br>
+          </p>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_display_inline2"
+          class="btn margin-bottom">Try it Yourself »</a>
+      </div>
+
+      <div class="example">
+        <h3>Example</h3>
+        <p>Set the direction of some flexible items inside a &lt;div> element in reverse order:</p>
+
+        <div class="code">
+          <p>
+            <span class="brown">div </span> { <br>
+            <span class="brown">&#8195;display</span>: <span class="blue">flex</span>; <br>
+            <span class="brown">&#8195;flex-direction</span>: <span class="blue">row-reverse</span>; <br>
+            } <br>
+
+          </p>
+        </div>
+        <a target="_blank" href="https://www.w3schools.com/cssref/tryit.php?filename=trycss3_flex-direction"
+          class="btn margin-bottom">Try it Yourself »</a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+
+</html>

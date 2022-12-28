@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.main {
+  display: flex;
+  gap: 10px;
+}
+
+/* sidebar */
+.left-content {
+  flex-basis: 200px;
+  flex-shrink: 0;
+
+  border-right: 1px solid rgb(223, 223, 223);
+  background-color: rgb(231, 233, 235);
+}
+
+.sidebar {
+  margin: 10px;
+
+  position: sticky;
+  top: 10px;
+}
+
+.display-item {
+  margin: 1px 0 1px 8px;
+  border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.display-item a {
+  margin: 0 0 1px 10px;
+  color: rgb(175, 175, 175);
+  transition: 200ms;
+}
+
+.display-item a:hover {
+  color: rgb(105, 105, 105);
+}
+
+/* content */
+.content {
+  margin: 10px;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.brown {
+  color: brown;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.example {
+  background-color: rgb(231, 233, 235);
+  padding: 8px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.example h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.example p {
+  margin: 10px 0;
+}
+
+.code {
+  background-color: #fff;
+  padding: 8px 12px;
+  margin: 16px 0;
+  border-left: 4px solid #4caf50;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 6px 18px;
+}
+.btn:hover {
+  background-color: #419544;
+}
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+hr {
+  margin: 20px -16px;
+  opacity: 0.2;
+}
+
+.codespan {
+  font-size: 105%;
+  background-color: rgba(222, 222, 222, 0.3);
+  color: crimson;
+  padding: 0 4px;
+}
+
+.table-all {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
+
+  margin: 20px 0;
+}
+
+.table-all tr:nth-child(even) {
+  background-color: #e7e9eb;
+}
+
+.table-link {
+  color: inherit;
+  text-decoration: underline;
+}
+.table-link:hover {
+  color: green;
+}
+
+table,
+th,
+td {
+  padding: 10px;
+}
+
+.btnsmall {
+  float: right;
+  padding: 2px 10px 2px 10px;
+  font-size: 16px;
+}
+
+.table-property table {
+  border-collapse: collapse;
+  width: 60%;
+}
+.table-property td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tr-img {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tr-chrome {
+  background-image: url("https://www.w3schools.com/images/compatible_chrome.gif");
+}
+.tr-edge {
+  background-image: url("https://www.w3schools.com/images/compatible_edge.png");
+}
+.tr-mozilla {
+  background-image: url("https://www.w3schools.com/images/compatible_firefox.png");
+}
+.tr-safari {
+  background-image: url("https://www.w3schools.com/images/compatible_safari.png");
+}
+.tr-opera {
+  background-image: url("https://www.w3schools.com/images/compatible_opera.png");
+}
+
+.border {
+  border: 1px solid rgb(219, 219, 219);
+  padding: 0 15px;
+}
+.table-property-values table {
+  border-collapse: collapse;
+}
+.table-property-values td {
+  border: 1px solid rgb(202, 202, 202);
+}
+
+.table-property-values tr:nth-child(even) {
+  background-color: #e7e9eb;
+}
