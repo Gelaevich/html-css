@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.winter {
+  background-image: url("https://mobimg.b-cdn.net/v3/fetch/bb/bbf39070c591c2e4f63b2ce24be57fc6.jpeg");
+}
+
+.spring {
+  background-image: url("https://getwallpapers.com/wallpaper/full/5/7/f/74641.jpg");
+}
+
+.summer {
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/04/Summer-wallpapers-hd-1080P.jpg");
+}
+
+.autumn {
+  background-image: url("https://wallpaper.dog/large/969590.jpg");
+}
+
+.parallax {
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+}
+
+.h3-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 32px;
+}
