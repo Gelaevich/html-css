@@ -66,8 +66,6 @@ p {
 .content {
   margin: 10px;
   width: 100%;
-
-  overflow: hidden;
 }
 
 .brown {
@@ -123,7 +121,7 @@ p {
 }
 
 hr {
-  margin: 20px -16px;
+  margin: 20px 0;
   opacity: 0.2;
 }
 
