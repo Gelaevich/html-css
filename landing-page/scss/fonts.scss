@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Objective";
+  src: url("/landing-page/fonts/Objective_Woff2/Objective-Regular.woff2")
+      format("woff2"),
+    url("/landing-page/fonts/Objective_OTF/Objective-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Objective";
+  src: url("/landing-page/fonts/Objective_Woff2/Objective-Bold.woff2")
+      format("woff2"),
+    url("/landing-page/fonts/Objective_OTF/Objective-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Objective";
+  src: url("/landing-page/fonts/Objective_Woff2/Objective-Medium.woff2")
+      format("woff2"),
+    url("/landing-page/fonts/Objective_OTF/Objective-Medium.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
