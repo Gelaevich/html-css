@@ -217,6 +217,7 @@ body {
 
 .title-section {
 }
+
 .title-section__container {
   display: flex;
   padding: 24px 0 75px 0;
@@ -224,6 +225,7 @@ body {
     padding: 24px 0 0 0;
   }
 }
+
 .title-section__content {
   flex: 0 1 61%;
   padding: 0 0 0 122px;
@@ -238,6 +240,7 @@ body {
     padding: 0 0 0 21px;
   }
 }
+
 .title-section__title {
   font-weight: 500;
   font-size: 50px;
@@ -246,6 +249,7 @@ body {
 
   padding: 0 0 14px 0;
 }
+
 .title-section__text {
   font-weight: 400;
   font-size: 20px;
@@ -253,6 +257,7 @@ body {
 
   padding: 0 0 60px 0;
 }
+
 .btn {
   padding: 0 20px 0 0;
   @media (max-width: 1225px) {
@@ -262,20 +267,24 @@ body {
   @media (max-width: 992px) {
   }
 }
+
 .btn-blue {
 }
+
 .play-market-btn {
   @media (max-width: 992px) {
     vertical-align: baseline;
     margin: 0 0 10px 20px;
   }
 }
+
 .app-store-btn {
   @media (max-width: 992px) {
     vertical-align: baseline;
     margin: 0 0 10px 20px;
   }
 }
+
 .title-section__image {
   flex: 0 1 39%;
   padding: 0 0 0 32px;
@@ -299,8 +308,10 @@ body {
 
 .what-we-do {
 }
+
 .what-we-do__container {
 }
+
 .left-squares {
   position: absolute;
   bottom: -11%;
@@ -312,11 +323,13 @@ body {
     bottom: -7%;
   }
 }
+
 .right-squares {
   position: absolute;
   top: -13%;
   right: -320px;
 }
+
 .what-we-do__content-box {
   margin: 10%;
   position: relative;
@@ -372,6 +385,7 @@ body {
     transform: translate(0, 0);
   }
 }
+
 .second-card::before {
   top: 42%;
   left: -28%;
@@ -392,6 +406,7 @@ body {
   bottom: 0;
   right: 0;
 }
+
 .third-card::before {
   position: absolute;
   opacity: 0.99;
@@ -428,12 +443,14 @@ body {
     margin: 10px auto;
   }
 }
+
 .card-image {
   position: relative;
   width: 100%;
   margin-bottom: 56px;
   z-index: 0;
 }
+
 .card-title {
   margin-bottom: 16px;
 
@@ -443,6 +460,7 @@ body {
 
   letter-spacing: 0.02em;
 }
+
 .card-text {
   margin-bottom: 62px;
 
@@ -454,6 +472,7 @@ body {
 
   opacity: 0.6;
 }
+
 .card-link {
   font-weight: 500;
   font-size: 14px;
@@ -462,6 +481,7 @@ body {
 
   color: #4a99d3;
 }
+
 // --------- how it works -------
 
 .how-its-works {
@@ -480,6 +500,7 @@ body {
   @media (max-width: 767.98px) {
   }
 }
+
 .how-its-works__title {
   font-weight: 700;
   font-size: 26px;
@@ -489,6 +510,7 @@ body {
 
   margin-bottom: 8%;
 }
+
 .how-its-works__content {
   display: flex;
   justify-content: center;
@@ -499,6 +521,7 @@ body {
     align-items: center;
   }
 }
+
 .how-its-works__card {
   width: 20%;
   @media (max-width: 1223.89px) {
@@ -514,6 +537,7 @@ body {
     margin-bottom: 30px;
   }
 }
+
 .how-its-works__card-img {
   margin-bottom: 30px;
 }
@@ -529,6 +553,7 @@ body {
   font-size: 16px;
   line-height: 26px;
 }
+
 // ------------- clients say ----------
 
 .clients-say {
@@ -549,6 +574,7 @@ body {
     display: none;
   }
 }
+
 .clients-say__container {
   display: flex;
   align-items: center;
@@ -580,6 +606,7 @@ body {
     display: none;
   }
 }
+
 .clients-say__img {
   @media (max-width: 1223.89px) {
   }
@@ -591,6 +618,7 @@ body {
   @media (max-width: 767.98px) {
   }
 }
+
 .clients-say__title {
   width: 100%;
   text-align: center;
@@ -609,6 +637,7 @@ body {
     margin: 50px 0 25px 0;
   }
 }
+
 .clients-say__content {
   position: relative;
 
@@ -625,9 +654,11 @@ body {
     margin: 0 auto;
   }
 }
+
 .clients-say__quotes {
   margin-bottom: 40px;
 }
+
 .clients-say__text {
   width: 75%;
 
@@ -650,6 +681,7 @@ body {
   @media (max-width: 767.98px) {
   }
 }
+
 .clients-say__author {
   font-weight: 500;
   font-size: 18px;
@@ -715,18 +747,6 @@ body {
   color: #4a99d3;
 }
 
-// @media (max-width: 1223.89px) {
-
-// }
-// // --TABLET--
-// @media (max-width: 992px) {
-
-// }
-// // --MOBILLE--
-// @media (max-width: 767.98px) {
-
-// }
-
 // ---------- Download App ----------
 
 .download-app {
@@ -751,6 +771,7 @@ body {
     display: none;
   }
 }
+
 .download-app__img {
   @media (max-width: 1223.89px) {
     width: 90%;
@@ -763,6 +784,7 @@ body {
   @media (max-width: 767.98px) {
   }
 }
+
 .download-app__content {
   width: 49%;
   @media (max-width: 1223.89px) {
@@ -776,6 +798,7 @@ body {
     margin: 0 auto;
   }
 }
+
 .download-app__title {
   font-weight: 700;
   font-size: 25px;
@@ -784,6 +807,7 @@ body {
 
   margin-bottom: 16px;
 }
+
 .download-app__text {
   font-weight: 400;
   font-size: 16px;
@@ -804,6 +828,7 @@ body {
   @media (max-width: 767.98px) {
   }
 }
+
 .download-app__btn-box {
   display: flex;
   justify-content: center;
@@ -818,6 +843,7 @@ body {
     gap: 5px;
   }
 }
+
 .download-app__google-play {
   @media (max-width: 1223.89px) {
   }
@@ -828,6 +854,7 @@ body {
   @media (max-width: 767.98px) {
   }
 }
+
 .download-app__app-store {
   @media (max-width: 1223.89px) {
   }
@@ -838,6 +865,7 @@ body {
   @media (max-width: 767.98px) {
   }
 }
+
 .download-app__left-squares {
   position: absolute;
   bottom: -31%;
@@ -849,6 +877,7 @@ body {
     bottom: -40%;
   }
 }
+
 .download-app__right-squares {
   position: absolute;
   bottom: -28%;
@@ -868,16 +897,20 @@ body {
   background: #4a99d3;
   margin-top: 123px;
 }
+
 .footer hr {
   background-color: #ffffff;
   height: 1px;
 }
+
 .footer-top__container {
   margin-top: 55px;
 }
+
 .footer__top {
   display: flex;
 }
+
 .footer__logo {
   font-weight: 700;
   font-size: 34px;
@@ -889,11 +922,13 @@ body {
     flex-grow: 1;
   }
 }
+
 .footer__quick-links {
   display: flex;
   flex-direction: column;
   flex: 1 1 11%;
 }
+
 .footer__title {
   font-weight: 500;
   font-size: 18px;
@@ -915,29 +950,34 @@ body {
 
   margin-bottom: 18px;
 }
+
 .footer__title:hover,
 .footer__link:hover {
   color: #cdc8f2;
   transition: all 200ms;
 }
+
 .footer__others {
   flex: 1 1 11%;
 
   display: flex;
   flex-direction: column;
 }
+
 .footer__products {
   flex: 1 1 11%;
 
   display: flex;
   flex-direction: column;
 }
+
 .footer__subscribe {
   flex: 3 1 28%;
   @media (max-width: 767.98px) {
     display: none;
   }
 }
+
 .footer__subscribe p {
   font-weight: 400;
   font-size: 18px;
@@ -946,15 +986,18 @@ body {
 
   margin-bottom: 20px;
 }
+
 .footer__form {
   display: flex;
 }
+
 .footer__email {
   flex-basis: 70%;
   height: 50px;
   margin-right: 10px;
   border-radius: 3px;
 }
+
 .footer__email::placeholder {
   padding-left: 10px;
   font-weight: 400;
@@ -977,15 +1020,18 @@ body {
 
   color: #4a99d3;
 }
+
 .footer__submit:hover {
   background-color: #c3dae9;
   transition: all 300ms;
 }
+
 .footer__bottom {
   display: flex;
   justify-content: space-between;
   padding: 23px 0;
 }
+
 .footer__copy {
   font-weight: 700;
   font-size: 11px;
@@ -993,14 +1039,17 @@ body {
 
   color: #ffffff;
 }
+
 .footer__social {
   display: flex;
   gap: 25px;
 }
+
 .footer__social a {
   gap: 25px;
   color: #ffffff;
 }
+
 .footer__social a:hover {
   gap: 25px;
   color: #a0c5d2;
