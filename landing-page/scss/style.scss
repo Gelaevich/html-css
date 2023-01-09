@@ -171,6 +171,7 @@ body {
 .menu {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 0 123px 0 0;
 
   @media (max-width: 1223.89px) {
@@ -197,7 +198,17 @@ body {
   }
   // --MOBILLE--
   @media (max-width: 767.98px) {
-    // padding: 0 0 0 0;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    background-color: #ffffff;
+    padding: 100px 20px 20px 20px;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    transition: transform 300ms;
   }
   // --MOBILLE--
   @media (max-width: 424.98px) {
@@ -210,8 +221,75 @@ body {
   font-size: 18px;
   line-height: 1.9;
   color: #0f001a;
+  @media (max-width: 767.98px) {
+    display: block;
+    padding: 20px 400px;
+    font-size: 38px;
+    height: 100%;
+    background-color: transparent;
+  }
 }
 
+.burger-menu {
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: relative;
+  margin-right: 20px;
+  display: none;
+
+  @media (max-width: 1225px) {
+  }
+  // --TABLET--
+  @media (max-width: 992px) {
+  }
+  // --MOBILLE--
+  @media (max-width: 767.98px) {
+    display: block;
+    background-color: transparent;
+    z-index: 2;
+  }
+  // --MOBILLE--
+  @media (max-width: 424.98px) {
+  }
+}
+
+.burger-menu span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  left: 5px;
+  transition: transform 300ms, opacity 300ms, background-color 300ms;
+}
+
+.burger-menu span:nth-child(1) {
+  transform: translateY(-12px);
+}
+
+.burger-menu span:nth-child(2) {
+  transform: translateY(-2px);
+}
+
+.burger-menu span:nth-child(3) {
+  transform: translateY(8px);
+}
+
+.header.open .menu__list {
+  transform: translateY(100%);
+}
+
+.header.open .burger-menu span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.header.open .burger-menu span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .burger-menu span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
 // ----- MAIN -----
 // ----- title-section ----
 
@@ -441,6 +519,7 @@ body {
   @media (max-width: 767.98px) {
     width: 70%;
     margin: 10px auto;
+    padding: 0 24px 24px 24px;
   }
 }
 
@@ -995,11 +1074,12 @@ body {
   flex-basis: 70%;
   height: 50px;
   margin-right: 10px;
+  padding-left: 15px;
   border-radius: 3px;
+  font-size: 18px;
 }
 
 .footer__email::placeholder {
-  padding-left: 10px;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
