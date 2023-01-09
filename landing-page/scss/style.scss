@@ -469,7 +469,7 @@ body {
   left: -28%;
   position: absolute;
   opacity: 0.99;
-  content: url("/landing-page/img/what-we-do/left-dots.png");
+  content: url("../img/what-we-do/left-dots.png");
   opacity: 0.1;
   @media (max-width: 1225px) {
     left: -35%;
@@ -487,10 +487,9 @@ body {
 
 .third-card::before {
   position: absolute;
-  opacity: 0.99;
   right: -20%;
   bottom: -15%;
-  content: url("/landing-page/img/what-we-do/right-dots.png");
+  content: url("../img/what-we-do/right-dots.png");
   opacity: 0.1;
   @media (max-width: 1225px) {
     right: -25%;
@@ -768,10 +767,11 @@ body {
   color: #0f001a;
 }
 
-.clients-say__dots {
+.clients-say__content::before {
+  content: url("../img/clients-say/dots.png");
   position: absolute;
-  right: -8%;
-  top: 12%;
+  left: 400px;
+  top: 40px;
   @media (max-width: 1223.89px) {
     right: -40%;
     top: 18%;
@@ -789,22 +789,25 @@ body {
 
 .clients-say__pagination {
   position: absolute;
-  bottom: -30%;
+  bottom: 5%;
+  float: right;
   right: 25%;
+
   border-radius: 4px;
 
   display: flex;
   @media (max-width: 1223.89px) {
-    bottom: -20%;
+    bottom: 5%;
     right: 20%;
   }
   // --TABLET--
   @media (max-width: 992px) {
+    bottom: 0%;
   }
   // --MOBILLE--
   @media (max-width: 767.98px) {
-    bottom: -5%;
-    right: 0;
+    bottom: -15%;
+    right: 20%;
   }
 }
 
@@ -814,6 +817,11 @@ body {
   border-radius: 4px 0 0 4px;
   font-size: 28px;
   color: #ffffff;
+  transition: all 300ms;
+}
+.clients-say__left:hover {
+  background: #3d7dab;
+  color: #dadada;
 }
 
 .fa-angle-right {
@@ -824,8 +832,25 @@ body {
   border-radius: 0px 4px 4px 0px;
   font-size: 28px;
   color: #4a99d3;
+  transition: all 300ms;
+}
+.fa-angle-right:hover {
+  box-shadow: 0px 4px 16px rgba(124, 38, 38, 0.28);
+  color: #4086b8;
 }
 
+.slides {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 // ---------- Download App ----------
 
 .download-app {
