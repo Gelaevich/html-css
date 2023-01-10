@@ -654,6 +654,9 @@ body {
 }
 
 .clients-say__container {
+}
+
+.slider__container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -686,6 +689,7 @@ body {
 }
 
 .clients-say__img {
+  max-height: 500px;
   @media (max-width: 1223.89px) {
   }
   // --TABLET--
@@ -841,7 +845,7 @@ body {
 
 .slides {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 @keyframes fade {
   from {
