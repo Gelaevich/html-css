@@ -6,7 +6,6 @@ setInterval(function () {
 
 let firstNum, secondNum, thirdNum;
 let wrapper = document.getElementById("wrapper");
-let button = document.getElementById("btn");
 let currentColor = document.getElementById("currColor");
 
 function dataOutput() {
