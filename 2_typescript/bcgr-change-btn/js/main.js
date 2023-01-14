@@ -1,14 +1,20 @@
-"use strict";
-setInterval(function () {
-    (firstNum = Math.floor(Math.random() * 256)),
-        (secondNum = Math.floor(Math.random() * 256)),
-        (thirdNum = Math.floor(Math.random() * 256));
-}, 300);
-let firstNum, secondNum, thirdNum;
-let wrapper = document.getElementById("wrapper");
-let currentColor = document.getElementById("currColor");
+var firstNum, secondNum, thirdNum;
+var wrapper = document.getElementById("wrapper");
+var currentColor = document.getElementById("currColor");
+var btn = document.getElementById("btn");
+btn.addEventListener("click", dataOutput);
 function dataOutput() {
-    (wrapper.style.backgroundColor = `rgb(${firstNum}, ${secondNum}, ${thirdNum})`),
-        (currentColor.textContent = `rgb (${firstNum}, ${secondNum}, ${thirdNum})`);
+  (firstNum = Math.floor(Math.random() * 256)),
+    (secondNum = Math.floor(Math.random() * 256)),
+    (thirdNum = Math.floor(Math.random() * 256)),
+    (wrapper.style.backgroundColor = "rgb("
+      .concat(firstNum, ", ")
+      .concat(secondNum, ", ")
+      .concat(thirdNum, ")")),
+    (currentColor.textContent = "rgb ("
+      .concat(firstNum, ", ")
+      .concat(secondNum, ", ")
+      .concat(thirdNum, ")"));
 }
+
 //# sourceMappingURL=main.js.map
