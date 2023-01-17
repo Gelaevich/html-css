@@ -26,27 +26,25 @@ function insertCard(where, res){
   </div>`);
 }
 
+async function fetchFoodJSON(){
+  const response = await fetch(mealAPI);
+  const food = await response.json();
+  return food;
+}
+
 const handleClick = (event) => {
   const btnCategory = event.currentTarget.dataset.category;
 
   removeElementsByClass('card'); // Remove old cards, before get new ones
 
-  fetch(mealAPI)
-  .then(response => {
-    if (response.ok){
-      return response.json();
-    } else {
-      console.log("Error");
-      throw Error;
-    }
-  })
-  .then(meal => {
-    meal.forEach(meal => {
-      if (meal.Category === btnCategory) {
-        insertCard(cardBox, meal);
-      } else if (btnCategory === "All") {
-        insertCard(cardBox, meal);
-      }
+  fetchFoodJSON()
+  .then(food => {
+    food.forEach(food =>{
+      if (food.Category === btnCategory) {
+              insertCard(cardBox, food);
+            } else if (btnCategory === "All") {
+              insertCard(cardBox, food);
+            }
     })
   })
 } 
