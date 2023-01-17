@@ -29,6 +29,10 @@ function insertCard(where, res){
 async function fetchFoodJSON(){
   const response = await fetch(mealAPI);
   const food = await response.json();
+  if (!response.ok) {
+    const message = `An error has occured: ${response.status}`;
+    throw new Error(message);
+  }
   return food;
 }
 
