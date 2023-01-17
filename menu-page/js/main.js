@@ -9,9 +9,9 @@ function removeElementsByClass(className){
   }
 }
 
-function insertCard(where, res){
-  return where.insertAdjacentHTML(
-      'beforeend',
+
+function createCard(res){
+    return text =
   `<div class="card">
     <div class="card__img">
         <img src="${res.image}" alt="${res.Title}">
@@ -23,7 +23,7 @@ function insertCard(where, res){
       </div>
         <p class="card__text">${res.Text}</p>
     </div>  
-  </div>`);
+  </div>`;
 }
 
 async function fetchFoodJSON(){
@@ -36,20 +36,23 @@ async function fetchFoodJSON(){
   return food;
 }
 
+
 const handleClick = (event) => {
   const btnCategory = event.currentTarget.dataset.category;
+  let insertTxt = '';
 
   removeElementsByClass('card'); // Remove old cards, before get new ones
-
+  
   fetchFoodJSON()
   .then(food => {
     food.forEach(food =>{
       if (food.Category === btnCategory) {
-              insertCard(cardBox, food);
-            } else if (btnCategory === "All") {
-              insertCard(cardBox, food);
-            }
+        insertTxt += createCard(food);
+      } else if (btnCategory === "All") {
+        insertTxt += createCard(food);
+      }
     })
+    cardBox.insertAdjacentHTML('beforeend',insertTxt);
   })
 } 
 
