@@ -9,6 +9,23 @@ function removeElementsByClass(className){
   }
 }
 
+function insertCard(where, res){
+  return where.insertAdjacentHTML(
+      'beforeend',
+  `<div class="card">
+    <div class="card__img">
+        <img src="${res.image}" alt="${res.Title}">
+    </div>
+  <div class="card__content">
+    <div class="card__heading">
+        <h3 class="card__title">${res.Title}</h3>
+        <h3 class="card__price">${res.Price}</h3>
+      </div>
+        <p class="card__text">${res.Text}</p>
+    </div>  
+  </div>`);
+}
+
 const handleClick = (event) => {
   const btnCategory = event.currentTarget.dataset.category;
 
@@ -26,41 +43,12 @@ const handleClick = (event) => {
   .then(meal => {
     meal.forEach(meal => {
       if (meal.Category === btnCategory) {
-        let newCard = document.createElement('div');
-
-        newCard.innerHTML = `<div class="card__img">
-          <img src="${meal.image}" alt="img">
-        </div>
-        <div class="card__content">
-          <div class="card__heading">
-            <h3 class="card__title">${meal.Title}</h3>
-            <h3 class="card__price">${meal.Price}</h3>
-          </div>
-          <p class="card__text">${meal.Text}</p>
-        </div>`;
-
-        newCard.classList.add('card');
-        cardBox.append(newCard);
+        insertCard(cardBox, meal);
       } else if (btnCategory === "All") {
-        let newCard = document.createElement('div');
-
-        newCard.innerHTML = `<div class="card__img">
-          <img src="${meal.image}" alt="img">
-        </div>
-        <div class="card__content">
-          <div class="card__heading">
-            <h3 class="card__title">${meal.Title}</h3>
-            <h3 class="card__price">${meal.Price}</h3>
-          </div>
-          <p class="card__text">${meal.Text}</p>
-        </div>`;
-
-        newCard.classList.add('card');
-        cardBox.append(newCard);
+        insertCard(cardBox, meal);
       }
     })
   })
-  
 } 
 
 buttons.forEach(button => {
