@@ -9,7 +9,6 @@ function removeElementsByClass(className){
   }
 }
 
-
 function createCard(res){
     return text =
   `<div class="card">
@@ -35,7 +34,6 @@ async function fetchFoodJSON(){
   }
   return food;
 }
-
 
 const handleClick = (event) => {
   const btnCategory = event.currentTarget.dataset.category;
