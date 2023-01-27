@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       alert("Форма отправлена!")
     }
   }
+
   function formValidate(form){
     let error = 0
 
@@ -69,13 +70,16 @@ document.addEventListener('DOMContentLoaded', function() {
   function formAddError(input) {
       input.classList.add('_invalid')
   }
+
   function forRemoveError(input) {
     input.classList.remove('_invalid')
   }
+
   function emailTest(input) {
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(input).toLowerCase());
   }
+  
 })
 
 
