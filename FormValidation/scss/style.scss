@@ -91,7 +91,7 @@ h6 {
   align-items: center;
 
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 
   background-color: $border-blue;
 }
@@ -105,6 +105,7 @@ h6 {
   border-radius: 2%;
   overflow: hidden;
 }
+
 
 .form-header {
   height: 60px;
@@ -172,6 +173,15 @@ h6 {
   &__bio textarea {
     resize: none;
   }
+}
+
+._req{
+  
+}
+
+._invalid{
+  border: 1px solid rgb(70, 31, 31);
+  box-shadow: 0px 0px 5px red;
 }
 
 .label-color {
