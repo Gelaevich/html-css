@@ -1,116 +1,93 @@
+let form = document.querySelector('.form')
+const formElement = document.getElementById('form1')
+formElement.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const formData = new FormData(formElement)
 
+  const user = new User(formData)
+  
+  // console.log(user.hi())
+  let err = user.isReq()
+  let passErr = user.passValidate()
+  let emailVal = user.emailTest(user.email)
 
-document.addEventListener('DOMContentLoaded', function() {
-  let form = document.querySelector('.form')
-  form.addEventListener('submit', formSend)
-
-  async function formSend(e){
-    e.preventDefault() // запрещаем стандартную отправку формы
-
-    let error = formValidate(form)
-    let passErr = passValidate(form)
-
-    if (error !== 0) {
+  if (err !== 0) {
       alert("Заполните обязательные поля")
+    } else if(!emailVal){
+      alert("Электронная почта не является корректной")
     } else if( passErr !== 0 ) {
-      alert("Пароли не совпадают!")
+       alert("Пароли не совпадают!")
     } else {
-      let response = await fetch ({
-        method: 'POST'
-      })
-      form.reset()
-      alert("Форма отправлена!")
+       form.reset()
+       alert("Форма отправлена!")
     }
+
+})
+
+
+class User {
+  constructor(param){
+    this.fname = param.get('fname')
+    this.email = param.get('email')
+    this.pass = param.get('pwd')
+    this.cpass = param.get('cpwd')
   }
 
-  function formValidate(form){
-    let error = 0
+  hi(){
+    console.log(this.fname + " hi")
+  }
 
+  formAddError(input) {
+    input.classList.add('_invalid')
+  }
+
+  formRemoveError(input) {
+    input.classList.remove('_invalid')
+  }
+
+  isReq(){
+    let error = 0
     let formReq = document.querySelectorAll('._req')
     
-
     for (let i = 0; i < formReq.length; i++) {
       const input = formReq[i];
-      forRemoveError(input)
-
-      if(input.classList.contains('input-email')){
-        if(emailTest(input) || input.value === ''){
-          formAddError(input)
-          error++
-        }
-      } else {
+      this.formRemoveError(input);
         if (input.value === '') {
-          formAddError(input)
+          this.formAddError(input)
           error++
         }
       }
-    }
-
-    return error
+    return error  
   }
 
-  function passValidate(form) {
-    let passErr = 0
-    let password = document.querySelector('.input-password'),
-        cPassword = document.querySelector('.input-cPassword');
-    let formPass = document.querySelectorAll('.input-cPassword')
+  emailTest(input) {
+    let re = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
+        e = document.querySelector('.input-email');
+
+      e.classList.remove('_invalid');
+      if (!re.test(String(input))){
+        e.classList.add('_invalid')
+      }
+
+    return re.test(String(input).toLowerCase());
+
+  }
+
+  passValidate(form) {
+    let passErr = 0,
+        password = document.querySelector('.input-password'),
+        cPassword = document.querySelector('.input-cPassword'),
+        formPass = document.querySelectorAll('.pass')
     for (let j = 0; j < formPass.length; j++) {
       
       const input = formPass[j];
-      forRemoveError(input)
+      this.formRemoveError(input)
     
       if (password.value !== cPassword.value){
-        formAddError(input)
+        this.formAddError(input)
         passErr++
       }
       return passErr
     }
   }
-
-  function formAddError(input) {
-      input.classList.add('_invalid')
-  }
-
-  function forRemoveError(input) {
-    input.classList.remove('_invalid')
-  }
-
-  function emailTest(input) {
-    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(input).toLowerCase());
-  }
-  
-})
-
-
-class FormValidation {
-  required = false
-  
-  constructor(param){
-    this.required = param.required
-  }
-
-
-
 }
-
-class FnameValidation extends FormValidation {
-  firstName = fname.value;
-
-  constructor(param){
-    super(param)
-    this.firstName = param.firstName
-  }
-
-  isNameValid(firstName){
-    if(firstName == 'k'){
-      alert('ok')
-    }
-  }
-}
-
-const emailValidation = new FormValidation({
-  // if (inputEmail.value == "") {
-  //   alert("ok");
-  // }
-})
