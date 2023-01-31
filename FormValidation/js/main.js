@@ -1,93 +1,76 @@
-let form = document.querySelector('.form')
-const formElement = document.getElementById('form1')
-formElement.addEventListener('submit', (e) => {
-  e.preventDefault()
-  const formData = new FormData(formElement)
+class Validation{
+  constructor() {}
 
-  const user = new User(formData)
-  
-  // console.log(user.hi())
-  let err = user.isReq()
-  let passErr = user.passValidate()
-  let emailVal = user.emailTest(user.email)
-
-  if (err !== 0) {
-      alert("Заполните обязательные поля")
-    } else if(!emailVal){
-      alert("Электронная почта не является корректной")
-    } else if( passErr !== 0 ) {
-       alert("Пароли не совпадают!")
-    } else {
-       form.reset()
-       alert("Форма отправлена!")
-    }
-
-})
-
-
-class User {
-  constructor(param){
-    this.fname = param.get('fname')
-    this.email = param.get('email')
-    this.pass = param.get('pwd')
-    this.cpass = param.get('cpwd')
+  isEmpty(value){
+    return value.length ? false : true  
   }
 
-  hi(){
-    console.log(this.fname + " hi")
+  isEmail(value){
+    return /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(String(value).toLowerCase());
   }
 
-  formAddError(input) {
+  isPassword(pass1, pass2 = null){
+    if (pass1.length < 6) return false
+    if (pass1 !== pass2) return false
+
+    return true
+  }
+}
+
+function formValidation() {
+  const inputName = document.querySelector('#fname'),
+        inputEmail = document.querySelector('#email'),
+        inputPass1 = document.querySelector('#pwd'),
+        inputPass2 = document.querySelector('#cpwd')
+
+  const validation = new Validation()
+
+  function formAddError(input) {
     input.classList.add('_invalid')
   }
 
-  formRemoveError(input) {
+  function formRemoveError(input) {
     input.classList.remove('_invalid')
   }
 
-  isReq(){
-    let error = 0
-    let formReq = document.querySelectorAll('._req')
-    
-    for (let i = 0; i < formReq.length; i++) {
-      const input = formReq[i];
-      this.formRemoveError(input);
-        if (input.value === '') {
-          this.formAddError(input)
-          error++
-        }
-      }
-    return error  
+  formRemoveError(inputName)
+  if (validation.isEmpty(inputName.value)) {
+    formAddError(inputName)
   }
 
-  emailTest(input) {
-    let re = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
-        e = document.querySelector('.input-email');
-
-      e.classList.remove('_invalid');
-      if (!re.test(String(input))){
-        e.classList.add('_invalid')
-      }
-
-    return re.test(String(input).toLowerCase());
-
+  formRemoveError(inputEmail)
+  if (validation.isEmpty(inputEmail.value) || !validation.isEmail(inputEmail.value)) {
+    formAddError(inputEmail)
+  }
+  
+  formRemoveError(inputPass1)
+  if (validation.isEmpty(inputPass1.value) || !validation.isPassword(inputPass1.value, inputPass2.value)) {
+    formAddError(inputPass1)
+  }
+  
+  formRemoveError(inputPass2)
+  if (validation.isEmpty(inputPass2.value) || !validation.isPassword(inputPass1.value, inputPass2.value)) {
+    formAddError(inputPass2)
   }
 
-  passValidate(form) {
-    let passErr = 0,
-        password = document.querySelector('.input-password'),
-        cPassword = document.querySelector('.input-cPassword'),
-        formPass = document.querySelectorAll('.pass')
-    for (let j = 0; j < formPass.length; j++) {
-      
-      const input = formPass[j];
-      this.formRemoveError(input)
-    
-      if (password.value !== cPassword.value){
-        this.formAddError(input)
-        passErr++
-      }
-      return passErr
-    }
+  if (validation.isEmpty(inputName.value)||
+      validation.isEmpty(inputEmail.value)||
+      validation.isEmpty(inputPass1.value)||
+      validation.isEmpty(inputPass2.value)){
+        alert('Заполните обязательные поля!')
+  } else if (!validation.isEmail(inputEmail.value)){
+    alert('Введите корректный Email адрес!')
+  } else if (!validation.isPassword(inputPass1.value, inputPass2.value)){
+    alert('Что-то с паролем!')
+  } else {
+    form.reset()
+    alert('Отправлено!')
   }
 }
+
+const form = document.querySelector('.form')
+form.addEventListener('submit', function(e){
+  e.preventDefault()
+})
+form.addEventListener('submit', formValidation)
+
