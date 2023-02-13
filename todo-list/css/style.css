@@ -108,7 +108,7 @@ body {
 
   display: flex;
   justify-content: end;
-  gap: 2%;
+  gap: 5%;
 }
 
 .done {
@@ -118,16 +118,24 @@ body {
   border-radius: 35%;
   background-color: #50E3A4;
   cursor: pointer;
-  margin-right: 4px;
   transition: all 500ms;
 }
 
 .delete {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 13px;
   padding: 6px;
   border-radius: 35%;
   background-color: rgb(217, 109, 109);
+  cursor: pointer;
+}
+
+.edit {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 6px;
+  border-radius: 35%;
+  background-color: rgb(230, 230, 140);
   cursor: pointer;
 }
 
@@ -144,7 +152,7 @@ body {
   cursor: pointer;
 }
 
-.add-new-item:hover, .done:hover, .delete:hover {
+.add-new-item:hover, .done:hover, .delete:hover, .edit:hover {
   background-color: #44c58d;
   transition: all 400ms;
 
@@ -155,6 +163,10 @@ body {
 
 .delete:hover{
   background-color: rgb(209, 84, 84);
+}
+
+.edit:hover{
+  background-color: rgb(224, 224, 104);
 }
 
 .li-done {

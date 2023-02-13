@@ -3,15 +3,18 @@ import { Note } from "./Notes.js"
 let id = 0
 
 document.getElementById('add-btn').addEventListener('click', () => {
-  const newNote = new Note(document.querySelector('.list'), prompt('What do you want to do?'))
-  newNote.id = id+1
+  let newId = id
+while (document.getElementById(`${newId}`)) {
+newId++
+}
+id = newId
+  const newNote = new Note(document.querySelector('.list'), prompt('What do you want to do?'), false, id)
   newNote.setCookie()
-  id++
 })
 
 document.addEventListener("DOMContentLoaded", getNotesFromCookie());
 
-function getNotesFromCookie() {
+function getNotesFromCookie()  {
   let cId = 0
   let cName = ''
 
@@ -24,18 +27,16 @@ function getNotesFromCookie() {
     } else {
       let idLength = val.indexOf('=')
       cId = val.slice(0, idLength)
-
+  
       let nameLength = val.indexOf('done: ')
       cName = val.slice(idLength+1, nameLength)
-
+  
       let cDone = val.slice(nameLength + 6, val.length)
       let bDone = (cDone === 'true')
-      console.log(cDone)
-      console.log(typeof(cDone))
-
-      const newNote = new Note(document.querySelector('.list'), cName, bDone, cId)
+  
+      const note = new Note(document.querySelector('.list'), cName, bDone, cId)
+      note.checkDone()
       id++
     }
   })
 }
-

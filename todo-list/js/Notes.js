@@ -4,83 +4,96 @@ export class Note {
   _done = false
   
 
-  constructor(container, name = '', done = false, id){
-    this.item = document.createElement('div')
-    this.btnGroup = document.createElement('div')
-    this.nameParagraph = document.createElement('p')
-    this.doneBtn = document.createElement('a')
-    this.doneBtnIcon = document.createElement('i')
-    this.deleteBtn = document.createElement('a')
-    this.deleteBtnIcon = document.createElement('i')
+  constructor(container, name = '', done = false, id) {
+    this.name = name
+    this.done = done
+    this.container = container
+    this.id = id
 
-    this.item.classList.add('list-item')
-    this.btnGroup.classList.add('btn-box')
-    this.nameParagraph.classList.add('item-text')
-    this.doneBtn.classList.add('done')
-    this.doneBtnIcon.classList.add('fa-solid', 'fa-check')
-    this.deleteBtn.classList.add('delete')
-    this.deleteBtnIcon.classList.add('fa-solid', 'fa-ban')
+    let template = `<div class="list-item" id="${id}">
+                        <p class="item-text">${name}</p>
+                        <div class="btn-box">
+                          <a class="done"><i class="fa-check fa-solid"></i></a>
+                          <a class="edit"><i class="fa-solid fa-pen"></i></a>
+                          <a class="delete"><i class="fa-solid fa-ban"></i></a>
+                        </div>
+                      </div>`
+    
+    container.insertAdjacentHTML("beforeend", template)
+
+    this.item = document.getElementById(`${id}`)
+    this.nameParagraph = this.item.querySelector('.item-text')
+    this.doneBtn = this.item.querySelector('.done')
+    this.deleteBtn = this.item.querySelector('.delete')
+    this.editButton = this.item.querySelector('.edit')
 
     this.doneBtn.addEventListener('click', () => {
       this.done = !this.done
       this.changeCookieDoneStatus()
-      console.log(document.cookie)
+
+      if(this.done){
+        this.nameParagraph.classList.add('li-done')
+        this.doneBtn.classList.add('done-active')
+      } else {
+        this.nameParagraph.classList.remove('li-done')
+        this.doneBtn.classList.remove('done-active')
+      }
     })
 
     this.deleteBtn.addEventListener('click', () => {
       if(confirm('Are you sure you want to delete this note?')){
         this.delete()
         this.removeCookie()
-        console.log(document.cookie)
       }
     })
 
-    this.doneBtn.append(this.doneBtnIcon)
-    this.deleteBtn.append(this.deleteBtnIcon)
-    this.btnGroup.append(this.doneBtn)
-    this.btnGroup.append(this.deleteBtn)
-    this.item.append(this.nameParagraph)
-    this.item.append(this.btnGroup)
+    this.editButton.addEventListener("click", () => {
+      this.edit()
+    });
 
-    this.name = name
-    this.done = done
-    this.container = container
-    this.id = id
-
-    container.append(this.item)
   }
 
   set name(value){
     this._name = value
-    this.nameParagraph.textContent = value
   }
 
   get name(){
     return this._name
   }
 
-  set done(value){
-    this._done = value
-
-    if(value){
-      this.nameParagraph.classList.add('li-done')
-      this.doneBtn.classList.add('done-active')
-      this.doneBtnIcon.classList.remove('fa-solid', 'fa-check') 
-      this.doneBtnIcon.classList.add('fa-solid', 'fa-backward')  
-    } else {
-      this.nameParagraph.classList.remove('li-done')
-      this.doneBtn.classList.remove('done-active')
-      this.doneBtnIcon.classList.remove('fa-solid', 'fa-backward')
-      this.doneBtnIcon.classList.add('fa-solid', 'fa-check') 
+  edit() {
+    const newName = prompt("Enter new name", this.name);
+    if (newName) {
+      this.name = newName;
+      this.nameParagraph.textContent = newName;
+      this.changeCookieName(newName);
     }
-  }
-
-  get done(){
-    return this._done
   }
 
   delete(){
     this.item.remove()
+  }
+
+  checkDone(){
+    if(this.done){
+        this.nameParagraph.classList.add('li-done')
+        this.doneBtn.classList.add('done-active')
+      } else {
+        this.nameParagraph.classList.remove('li-done')
+        this.doneBtn.classList.remove('done-active')
+      }
+  }
+
+  changeCookieName(newName) {
+    const name = this.id + "="
+    const cDecoded = decodeURIComponent(document.cookie)
+    const cArr = cDecoded.split('; ')
+    let res
+    cArr.forEach(val => {
+      if (val.indexOf(name) === 0) res = val.substring(0);
+    })
+
+    document.cookie = this.id + '=' + newName + "done: " + this.done + '; expires=' + new Date(Date.now() + 86400e3) + '; path=/'
   }
 
   changeCookieDoneStatus() {
@@ -91,7 +104,6 @@ export class Note {
     cArr.forEach(val => {
       if (val.indexOf(name) === 0) res = val.substring(0);
     })
-    // console.log(res)
 
     const regex1 = 'done: false'
     const regex2 = 'done: true'
@@ -116,19 +128,4 @@ export class Note {
     document.cookie = this.id + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
   }
   
-
-  // static add() {
-  //   id++
-  //   const newNote = new Note(document.querySelector('.list'), prompt('What do you want to do?'), false)
-  //   Note.id = id
-  //   console.log(newNote)
-  // }
-
-  // static setId(){
-  //   id++
-  // }
-
-  // static getId(){
-  //   return this.id
-  // }
 }
