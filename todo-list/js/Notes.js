@@ -63,10 +63,14 @@ export class Note {
 
   edit() {
     const newName = prompt("Enter new name", this.name);
-    if (newName) {
-      this.name = newName;
-      this.nameParagraph.textContent = newName;
-      this.changeCookieName(newName);
+    if (newName.trim() == '') {
+      alert('You should enter something')
+    } else {
+      if (newName) {
+        this.name = newName.trim();
+        this.nameParagraph.textContent = newName.trim();
+        this.changeCookieName(newName);
+      }
     }
   }
 

@@ -4,11 +4,13 @@ let id = 0
 
 document.getElementById('add-btn').addEventListener('click', () => {
   let newId = id
-while (document.getElementById(`${newId}`)) {
-newId++
-}
-id = newId
-  const newNote = new Note(document.querySelector('.list'), prompt('What do you want to do?'), false, id)
+    while (document.getElementById(`${newId}`)) {
+    newId++
+  }
+  id = newId
+  let getName = prompt('What do you want to do?').trim()
+  if(getName.length == 0) return alert('You should enter something')
+  const newNote = new Note(document.querySelector('.list'), getName, false, id)
   newNote.setCookie()
 })
 
