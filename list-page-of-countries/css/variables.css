@@ -1,0 +1,29 @@
+:root{
+
+  /* Light Mode */
+
+  --bcg-color1: #F8F9FA;
+  --main-color1: #FFFFFF;
+  --text-color: #000000;
+
+  /* Media breakpoints */
+
+  /* For Mobile Devices – 320px — 480px
+    iPads and Tablets – 481px — 768px
+    Laptops and small screen – 769px — 1024px
+    Large screens and Desktops – 1025px — 1200px
+    TV and Extra Large Screens – 1201px and more */
+
+  --size-xs: 320px;
+  --size-s: 480px;
+  --size-m: 768px;
+  --size-l: 1024px;
+  --size-xl: 1200px;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bcg-color1: #1e1f20;
+  --main-color1: #474545;
+  --text-color: #ffffff;
+}

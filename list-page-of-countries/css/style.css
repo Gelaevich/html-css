@@ -1,0 +1,281 @@
+@import url(variables.css);
+
+/********************
+* Start: Default Styles
+********************/
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/********************
+* End: Default Styles
+********************/
+
+/********************
+* Start: List Page 
+********************/
+body {
+	background-color: var(--bcg-color1);
+}
+
+.container {
+	margin: 0 auto;
+	font-family: 'Rubik', sans-serif;
+
+	max-width: var(--size-xl);
+	background-color: var(--bcg-color1);
+
+	color: var(--text-color);
+}
+
+.header {
+	max-width: var(--size-xl);
+	background-color: var(--main-color1);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1% 5%;
+}
+
+.title {
+	font-size: 20px;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 50px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 2px;
+  content: "";
+  height: 20px;
+  left: 1px;
+  position: absolute;
+  transition: .4s;
+  width: 20px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.main {
+	max-width: var(--size-xl);
+	padding: 2% 5%;
+}
+
+.search-container {
+	margin-bottom: 2%;
+}
+
+.search-container form {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.search-container form input{
+	padding: 5px 0 5px 25px;
+	border-radius: 5px;
+	border: 1px solid rgb(208, 207, 207);
+	opacity: 0.7;
+}
+
+.search-container form::before{
+	position: absolute;
+	left: 8px;
+	bottom: 10px;
+	content: url(../img/magnifying-glass-solid.svg);
+	width: 10px;
+	height: 10px;
+	
+}
+
+.search-container form select{
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 1px solid rgb(208, 207, 207);
+	opacity: 0.7;
+}
+
+.card-box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8%;
+}
+
+.card {
+	width: 19%;
+	margin-bottom: 3%;
+
+	background: rgba( 255, 255, 255, 0.45 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 4.5px );
+	-webkit-backdrop-filter: blur( 4.5px );
+	border-radius: 6px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+	overflow: hidden;
+}
+
+.card:hover {
+	transform: translateY(-3%);
+	transition: all 300ms;
+	box-shadow: 4px 12px 36px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+.flag {
+	width: 100%;
+	height: 125px;
+}
+
+.card-content {
+	height: 125px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+	padding-left: 5%;
+}
+
+.card-title {
+	font-weight: 700;
+}
+
+.card-text {
+}
+
+.pagination {
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	gap: 3px;
+}
+
+.pagination button {
+	border: 1px solid black;
+	padding: 5px;
+	border-radius: 5px;
+	width: 25px;
+}
+
+.active {
+	background-color: #b2b6d5;
+}
+
+@media (max-width: 1024px)  {
+	.card-box {
+		gap: 0;
+		justify-content: space-between;
+	}
+	.card {
+		width: 22%;
+		margin-bottom: 4%;
+	}
+}
+
+@media (max-width: 768px)  {
+	.card-box {
+		gap: 0;
+		justify-content: space-between;
+	}
+	.card {
+		width: 30%;
+		margin-bottom: 4%;
+	}
+	.flag {
+		height: 100px;
+	}
+	.card-content {
+		height: 100px;
+	}
+}
+
+@media (max-width: 425px)  {
+	.card {
+		width: 45%;
+		margin-bottom: 4%;
+	}
+}
