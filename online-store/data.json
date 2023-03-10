@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "img-url": "https://images2.imgbox.com/89/59/6An8aqJL_o.jpeg",
+    "name": "High-Back Bench",
+    "price": 9.99,
+    "category": "IKEA"
+  },
+  {
+    "id": 2,
+    "img-url": "https://images2.imgbox.com/7a/63/MSXCAbxy_o.jpeg",
+    "name": "Albany Table",
+    "price": 79.99,
+    "category": "MARCOS"
+  },
+  {
+    "id": 3,
+    "img-url": "https://images2.imgbox.com/09/58/9oyIxnvq_o.jpeg",
+    "name": "Accent Chair",
+    "price": 25.99,
+    "category": "CARESSA"
+  },
+  {
+    "id": 4,
+    "img-url": "https://images2.imgbox.com/b0/e8/9RR6A859_o.jpeg",
+    "name": "Wooden Table",
+    "price": 45.99,
+    "category": "CARESSA"
+  },
+  {
+    "id": 5,
+    "img-url": "https://images2.imgbox.com/26/1f/SRvvNeyh_o.jpeg",
+    "name": "Dining Table",
+    "price": 56.99,
+    "category": "CARESSA"
+  },
+  {
+    "id": 6,
+    "img-url": "https://images2.imgbox.com/3f/a7/LUkaeKXQ_o.jpeg",
+    "name": "Sofa Set",
+    "price": 29.99,
+    "category": "LIDDY"
+  },
+  {
+    "id": 7,
+    "img-url": "https://images2.imgbox.com/f6/9b/oU89hRrp_o.jpeg",
+    "name": "Modern Bookshelf",
+    "price": 19.99,
+    "category": "MARCOS"
+  },
+  {
+    "id": 8,
+    "img-url": "https://images2.imgbox.com/ea/5d/L23N0ZhH_o.jpeg",
+    "name": "Emperor Bed",
+    "price": 59.99,
+    "category": "LIDDY"
+  },
+  {
+    "id": 9,
+    "img-url": "https://images2.imgbox.com/9e/74/Lg3Ukpvo_o.jpeg",
+    "name": "Utopia Sofa",
+    "price": 39.95,
+    "category": "MARCOS"
+  },
+  {
+    "id": 10,
+    "img-url": "https://images2.imgbox.com/60/63/tkwXJAHY_o.jpeg",
+    "name": "Entertainment Center",
+    "price": 45.99,
+    "category": "LIDDY"
+  },
+  {
+    "id": 11,
+    "img-url": "https://images2.imgbox.com/05/35/dYOcfc1x_o.jpeg",
+    "name": "Albany Sectional",
+    "price": 59.99,
+    "category": "IKEA"
+  },
+  {
+    "id": 12,
+    "img-url": "https://images2.imgbox.com/81/85/PWzn2azi_o.jpeg",
+    "name": "Leather Sofa",
+    "price": 69.99,
+    "category": "LIDDY"
+  }
+]

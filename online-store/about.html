@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <title>About Us - Comfy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <!-- links -->
+      <div>
+        <button class="toggle-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links ">
+          <li>
+            <a href="index.html" class="nav-link page">
+              home
+            </a>
+          </li>
+          <li>
+            <a href="products.html" class="nav-link page">
+              products
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="nav-link page">
+              about
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- logo -->
+      <img src="./img/logo-black.svg" class="nav-logo" alt="logo" />
+      <!-- cart icon -->
+      <div class="toggle-container">
+        <button class="toggle-cart">
+          <i class="fas fa-shopping-cart page"></i>
+        </button>
+        <span class="cart-item-count">1</span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="section-center">
+      <h3 class="page-hero-title">Home / About</h3>
+    </div>
+  </section>
+
+  <!-- sidebar -->
+  <div class="sidebar-overlay">
+    <aside class="sidebar">
+      <!-- close -->
+      <button class="sidebar-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <!-- links -->
+      <ul class="sidebar-links">
+        <li>
+          <a href="index.html" class="sidebar-link">
+            <i class="fas fa-home fa-fw"></i>
+            home
+          </a>
+        </li>
+        <li>
+          <a href="products.html" class="sidebar-link">
+            <i class="fas fa-couch fa-fw"></i>
+            products
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="sidebar-link">
+            <i class="fas fa-book fa-fw"></i>
+            about
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <!-- cart -->
+  <div class="cart-overlay">
+    <aside class="cart">
+      <button class="cart-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <header>
+        <h3 class="text-slanted">your bag</h3>
+      </header>
+      <!-- cart items -->
+      <div class="cart-items">
+        <article class="cart-item" data-id="rec8kkCmSiMkbkiko">
+          <img src="https://images2.imgbox.com/09/58/9oyIxnvq_o.jpeg" class="cart-item-img" alt="accent chair">
+          <div>
+            <h4 class="cart-item-name">accent chair</h4>
+            <p class="cart-item-price">$25.99</p>
+            <button class="cart-item-remove-btn" data-id="rec8kkCmSiMkbkiko">remove</button>
+          </div>
+
+          <div>
+            <button class="cart-item-increase-btn" data-id="rec8kkCmSiMkbkiko">
+              <i class="fas fa-chevron-up"></i>
+            </button>
+            <p class="cart-item-amount" data-id="rec8kkCmSiMkbkiko">2</p>
+            <button class="cart-item-decrease-btn" data-id="rec8kkCmSiMkbkiko">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+      <!-- footer -->
+      <footer>
+        <h3 class="cart-total text-slanted">Total : $51.98 </h3>
+        <button class="cart-checkout btn">checkout</button>
+      </footer>
+    </aside>
+  </div>
+
+  <!-- About section -->
+  <section class="section about">
+    <div class="section-title title">
+      <h2> <span>/</span> our story</h2>
+      <div></div>
+    </div>
+    <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut finibus ante. Donec sed
+      bibendum massa, ut
+      malesuada justo. Nam vestibulum luctus odio, eu efficitur odio. Curabitur sit amet lectus euismod, sollicitudin
+      arcu et, luctus libero. Donec condimentum id lorem id vestibulum. Morbi nec augue vitae magna vestibulum congue id
+      id erat. Fusce ac nulla at enim fringilla luctus vel nec mauris. Sed a sapien in orci vulputate faucibus.</p>
+    <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut finibus ante. Donec sed
+      bibendum massa, ut
+      malesuada justo. Nam vestibulum luctus odio, eu efficitur odio. Curabitur sit amet lectus euismod, sollicitudin
+      arcu et, luctus libero. Donec condimentum id lorem id vestibulum. Morbi nec augue vitae magna vestibulum congue id
+      id erat. Fusce ac nulla at enim fringilla luctus vel nec mauris. Sed a sapien in orci vulputate faucibus.</p>
+  </section>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
