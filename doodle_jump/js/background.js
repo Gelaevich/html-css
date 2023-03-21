@@ -11,8 +11,16 @@ export class Background{
   update() {
     if(this.y > this.height){
       this.y = 0
+      this.game.add_platforms(-this.height, -15)
+      this.game.add_broken_platforms(-this.height, -15)
+      this.game.change_difficulty()
+
+      if(Math.random() < this.game.enemyChance/100){
+        this.game.add_enemy()
+      }
     } else {
-      this.y += 3
+      this.y += this.game.vy
+      this.game.score += Math.trunc(this.game.vy * 0.2)
     }
   }
 
