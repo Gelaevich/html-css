@@ -1,14 +1,15 @@
-import React from "react";
-import CounterClass from "./components/CounterClass";
-import CounterFunction from "./components/CounterFunction";
-import "./App.css";
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import Counter from './Counter';
 
 function App() {
   return (
-    <div className="App">
-      <CounterClass />
-      <CounterFunction />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Counter />
+      </div>
+    </Provider>
   );
 }
 
