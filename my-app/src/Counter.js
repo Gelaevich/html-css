@@ -1,5 +1,4 @@
 import './Counter.css'
-import App from './App'
 import { useDispatch, useSelector } from 'react-redux';
 
 function Counter(){
